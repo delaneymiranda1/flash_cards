@@ -1,5 +1,6 @@
 require './lib/deck'
 require './lib/card'
+require './lib/turn'
 
 RSpec.describe Deck do
   card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)

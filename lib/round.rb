@@ -5,19 +5,16 @@ class Round
     @turns = []
   end
 
-  def turns
-    @turns
-  end
-
   def current_card
-    deck.cards.first
+    deck.cards[0]
+    end
   end
 
   def take_turn(guess)
     turn = Turn.new(guess, current_card)
     @turns << turn
-    if @turns.include?(turn)
-      false
-    end
+    turn
+    deck.current_card.rotate
   end
+
 end
