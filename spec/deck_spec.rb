@@ -33,4 +33,10 @@ RSpec.describe Deck do
 
     expect(deck.cards_in_category(:Geography)).to eq([card_1])
   end
+  it 'is in a different category' do
+    deck = Deck.new(cards)
+
+    expect(deck.cards_in_category("Pop Culture")).to eq([])
+  end
+  
 end
